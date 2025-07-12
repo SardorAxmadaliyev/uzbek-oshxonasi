@@ -465,14 +465,128 @@ form .btn:hover {
   color: var(--second-color);
 }
 
-.copyright {
-  text-align: center;
-  padding: 20px;
+footer {
+  background: #1a2320;
+  color: #fff;
+  padding: 40px 0 0 0;
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.copyright span {
-  font-family: 'Turret Road', sans-serif;
-  font-weight: 600;
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 4%;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+  min-width: 180px;
+  margin-bottom: 24px;
+}
+
+.logo-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #16B978;
+  margin-bottom: 18px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: #16B978;
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+.footer-col ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #16B978;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #bdbdbd;
+  font-size: 0.95rem;
+  margin: 24px 0 0 0;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .footer-main {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .footer-col,
+  .logo-col {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .footer-col,
+  .logo-col {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 18px;
+  }
+
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+}
+
+.copyright {
+  display: none;
 }
 
 /* Chefs Section - Sample Design */
@@ -515,8 +629,7 @@ form .btn:hover {
   width: 100%;
   height: 100%;
   text-align: center;
-  padding: 20px;
-  padding-top: 8rem;
+  padding: 20px 18px 20px 18px;
   background: rgba(22, 185, 120, 0.13);
   backdrop-filter: blur(2px);
   color: var(--second-color);
@@ -525,7 +638,7 @@ form .btn:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .chef-box:hover .text {
@@ -602,16 +715,22 @@ form .btn:hover {
     right: 0;
     display: flex;
     flex-direction: column;
+    text-align: center;
     background: var(--second-color);
     box-shadow: 0 4px 4px rgb(14 55 54 / 15%);
     transition: .2s ease;
-    text-align: center;
+    z-index: 9999;
+    max-height: 80vh;
+    overflow-y: auto;
+    gap: 0;
   }
 
   .navbar a {
     padding: 1.5rem;
     display: block;
     color: #FFF;
+    border-radius: 0;
+    margin: 0;
   }
 
   .navbar.active {
@@ -649,7 +768,6 @@ form .btn:hover {
   .contact-info h2 {
     font-size: 1.6rem;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -658,3 +776,26 @@ form .btn:hover {
     height: 320px;
   }
 }
+
+.footer-logo a {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #16B978;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-logo a:hover {
+  color: #13a06a;
+}
+
+.footer-logo img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
