@@ -475,6 +475,115 @@ form .btn:hover {
   font-weight: 600;
 }
 
+/* Chefs Section - Sample Design */
+.chefs .chefs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.chef-box {
+  position: relative;
+  height: 420px;
+  flex: 1 1 18rem;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(8, 27, 84, 0.08);
+  background: #fafbfc;
+  transition: box-shadow 0.2s;
+}
+
+.chef-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.chef-box:hover img {
+  transform: scale(1.08);
+}
+
+.chef-box .text {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+  padding-top: 8rem;
+  background: rgba(22, 185, 120, 0.13);
+  backdrop-filter: blur(2px);
+  color: var(--second-color);
+  transition: top 0.5s;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.chef-box:hover .text {
+  top: 0;
+}
+
+.chef-box .text h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--second-color);
+  margin-bottom: 10px;
+}
+
+.chef-box .text p {
+  font-size: 1rem;
+  color: #222;
+  margin: 0 0 1rem 0;
+}
+
+.chef-box .btn {
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 2rem;
+  padding: 8px 22px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.25s;
+  border: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.chef-box .btn:hover {
+  background: var(--second-color);
+  color: #fff;
+  transform: scale(1.07);
+}
+
+@media (max-width: 1100px) {
+  .chef-box {
+    height: 320px;
+  }
+}
+
+@media (max-width: 700px) {
+  .chefs .chefs-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .chef-box {
+    width: 90vw;
+    max-width: 340px;
+    height: 220px;
+  }
+}
+
 @media (max-width: 1100px) {
   .home-text h1 {
     font-size: 3rem;
